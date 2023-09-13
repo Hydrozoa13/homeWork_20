@@ -17,7 +17,6 @@ class InfoTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.navigationItem.title = "Information"
         PersonsList.makePersonsList()
     }
 
@@ -36,8 +35,11 @@ class InfoTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath)
-        
-        cell.textLabel?.text = PersonsList.emailsArray[indexPath.section]
+        if indexPath.row == 0 {
+            cell.textLabel?.text = PersonsList.emailsArray[indexPath.section]
+        } else {
+            cell.textLabel?.text = PersonsList.numbersArray[indexPath.section]
+        }
         return cell
     }
     
