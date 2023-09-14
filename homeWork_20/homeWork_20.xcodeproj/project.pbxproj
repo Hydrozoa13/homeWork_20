@@ -16,7 +16,6 @@
 		D184E6362AB24AF000EFF706 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E6352AB24AF000EFF706 /* Person.swift */; };
 		D184E6392AB24B7A00EFF706 /* PersonsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E6382AB24B7A00EFF706 /* PersonsList.swift */; };
 		D1ADE0592AB264E0001D2AD4 /* InfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADE0582AB264E0001D2AD4 /* InfoTVC.swift */; };
-		D1ADE05C2AB26618001D2AD4 /* InfoTVCExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADE05B2AB26618001D2AD4 /* InfoTVCExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		D184E6352AB24AF000EFF706 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D184E6382AB24B7A00EFF706 /* PersonsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsList.swift; sourceTree = "<group>"; };
 		D1ADE0582AB264E0001D2AD4 /* InfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTVC.swift; sourceTree = "<group>"; };
-		D1ADE05B2AB26618001D2AD4 /* InfoTVCExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTVCExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 		D184E61A2AB23FBA00EFF706 /* homeWork_20 */ = {
 			isa = PBXGroup;
 			children = (
-				D1ADE05A2AB26603001D2AD4 /* Extensions */,
 				D184E6342AB24AE200EFF706 /* Models */,
 				D184E6372AB24B6300EFF706 /* DataServices */,
 				D184E6312AB2402B00EFF706 /* Controllers */,
@@ -117,14 +114,6 @@
 				D184E6382AB24B7A00EFF706 /* PersonsList.swift */,
 			);
 			path = DataServices;
-			sourceTree = "<group>";
-		};
-		D1ADE05A2AB26603001D2AD4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D1ADE05B2AB26618001D2AD4 /* InfoTVCExt.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +191,6 @@
 				D184E61E2AB23FBA00EFF706 /* SceneDelegate.swift in Sources */,
 				D184E6392AB24B7A00EFF706 /* PersonsList.swift in Sources */,
 				D184E6362AB24AF000EFF706 /* Person.swift in Sources */,
-				D1ADE05C2AB26618001D2AD4 /* InfoTVCExt.swift in Sources */,
 				D184E6332AB242B100EFF706 /* PersonsListTVC.swift in Sources */,
 				D1ADE0592AB264E0001D2AD4 /* InfoTVC.swift in Sources */,
 			);

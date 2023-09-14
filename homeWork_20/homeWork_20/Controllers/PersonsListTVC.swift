@@ -18,7 +18,7 @@ class PersonsListTVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         PersonsList.makePersonsList()
-        
+        tabBarController?.navigationItem.title = "Persons List"
     }
 
     // MARK: - Table view data source
@@ -30,7 +30,6 @@ class PersonsListTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         PersonsList.personsArray.count
-        
     }
 
     
