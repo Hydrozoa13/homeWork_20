@@ -11,10 +11,6 @@ class PersonsListTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
         PersonsList.makePersonsList()
         self.navigationItem.title = "Persons List"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
