@@ -21,7 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="MRf-zF-Itu" kind="relationship" relationship="viewControllers" id="Wkf-s6-MC8"/>
-                        <segue destination="9BI-3c-iMa" kind="relationship" relationship="viewControllers" id="X68-2S-7vF"/>
+                        <segue destination="eTl-qo-vqu" kind="relationship" relationship="viewControllers" id="X68-2S-7vF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1M-nX-vGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="1563" y="-623"/>
         </scene>
-        <!--Contact-->
+        <!--Contacts-->
         <scene sceneID="bhc-zZ-UeM">
             <objects>
                 <tableViewController id="9BI-3c-iMa" customClass="InfoTVC" customModule="homeWork_20" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,14 +152,11 @@
                             <outlet property="delegate" destination="9BI-3c-iMa" id="pHd-sL-psh"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contact" image="macbook.and.iphone" catalog="system" id="mzn-2H-c6z">
-                        <color key="badgeColor" red="0.32941177490000001" green="0.40000003579999999" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="UuP-sl-rQq"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="UuP-sl-rQq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0X-mX-xaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="62"/>
+            <point key="canvasLocation" x="778" y="45"/>
         </scene>
         <!--List-->
         <scene sceneID="GJT-kM-nqB">
@@ -186,6 +183,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUb-Mw-VIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24" y="-623"/>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="YSd-dn-o6U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eTl-qo-vqu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contact" image="macbook.and.iphone" catalog="system" id="mzn-2H-c6z">
+                        <color key="badgeColor" red="0.32941177490000001" green="0.40000003579999999" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsp-MY-Shy">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.82352948189999997" green="0.94509804249999996" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.3334089643" green="0.40167261970000001" blue="0.0043280558639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9BI-3c-iMa" kind="relationship" relationship="rootViewController" id="8m9-PX-o7U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZP-UI-Nme" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="45"/>
         </scene>
     </scenes>
     <resources>
