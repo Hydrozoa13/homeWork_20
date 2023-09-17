@@ -184,11 +184,11 @@
             </objects>
             <point key="canvasLocation" x="24" y="-623"/>
         </scene>
-        <!--Contact-->
+        <!--Contacts-->
         <scene sceneID="YSd-dn-o6U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eTl-qo-vqu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact" image="macbook.and.iphone" catalog="system" id="mzn-2H-c6z">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="macbook.and.iphone" catalog="system" id="mzn-2H-c6z">
                         <color key="badgeColor" red="0.32941177490000001" green="0.40000003579999999" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -197,6 +197,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.82352948189999997" green="0.94509804249999996" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="textColor" red="0.3334089643" green="0.40167261970000001" blue="0.0043280558639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>

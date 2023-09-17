@@ -27,8 +27,9 @@ class PersonsList {
                         "+375443343231", "+375259045623",
                         "+375297565645", "+375448346735"]
     
-    static func makePersonsList() -> [Person] {
-        var persons: [Person] = []
+    static var persons: [Person] = []
+    
+    static func makePersonsList() {
         for index in 0 ... namesArray.count - 1 {
             let person = Person(name: namesArray[index],
                                 surname: surnamesArray[index],
@@ -36,6 +37,5 @@ class PersonsList {
                                 number: numbersArray[index])
             persons.append(person)
         }
-        return persons
     }
 }
