@@ -27,15 +27,15 @@ class PersonsList {
                         "+375443343231", "+375259045623",
                         "+375297565645", "+375448346735"]
     
-    static var personsArray: [Person] = []
-    
-    static func makePersonsList() {
+    static func makePersonsList() -> [Person] {
+        var persons: [Person] = []
         for index in 0 ... namesArray.count - 1 {
             let person = Person(name: namesArray[index],
                                 surname: surnamesArray[index],
                                 email: emailsArray[index],
                                 number: numbersArray[index])
-            personsArray.append(person)
+            persons.append(person)
         }
+        return persons
     }
 }

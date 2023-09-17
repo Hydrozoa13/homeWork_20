@@ -8,6 +8,8 @@
 import UIKit
 
 class InfoTVC: UITableViewController {
+    
+    var persons: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +19,13 @@ class InfoTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        PersonsList.makePersonsList()
+        persons = PersonsList.makePersonsList()
     }
 
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return PersonsList.namesArray.count
+        return persons.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 2 }
@@ -32,17 +34,14 @@ class InfoTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath)
-        if indexPath.row == 0 {
-            cell.textLabel?.text = PersonsList.emailsArray[indexPath.section]
-        } else {
-            cell.textLabel?.text = PersonsList.numbersArray[indexPath.section]
-        }
+        let person = persons[indexPath.section]
+        cell.textLabel?.text = indexPath.row == 0 ? person.email : person.number
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = PersonsList.namesArray[section] + " " + PersonsList.surnamesArray[section]
-        return section
+        let person = persons[section]
+        return person.name + " " + person.surname
     }
 
     /*

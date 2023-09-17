@@ -8,10 +8,12 @@
 import UIKit
 
 class PersonsListTVC: UITableViewController {
+    
+    var persons: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        PersonsList.makePersonsList()
+        persons = PersonsList.makePersonsList()
         self.navigationItem.title = "Persons List"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -19,12 +21,12 @@ class PersonsListTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        PersonsList.personsArray.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let person = PersonsList.personsArray[indexPath.row]
+        let person = persons[indexPath.row]
         cell.textLabel?.text = "\(person.name) \(person.surname)"
         return cell
     }
@@ -35,7 +37,7 @@ class PersonsListTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            PersonsList.personsArray.remove(at: indexPath.row)
+            persons.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -43,8 +45,8 @@ class PersonsListTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool { true }
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let currentPerson = PersonsList.personsArray.remove(at: fromIndexPath.row)
-        PersonsList.personsArray.insert(currentPerson, at: to.row)
+        let currentPerson = persons.remove(at: fromIndexPath.row)
+        persons.insert(currentPerson, at: to.row)
     }
 
     // MARK: - Navigation
@@ -52,7 +54,7 @@ class PersonsListTVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow,
            let vc = segue.destination as? PersonInfo {
-            vc.person = PersonsList.personsArray[indexPath.row]
+            vc.person = persons[indexPath.row]
         }
     }
 }
