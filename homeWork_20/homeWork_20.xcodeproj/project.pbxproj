@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D142F77E2AB612D0004C59F0 /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D142F77D2AB612D0004C59F0 /* PersonInfo.swift */; };
 		D184E61C2AB23FBA00EFF706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E61B2AB23FBA00EFF706 /* AppDelegate.swift */; };
 		D184E61E2AB23FBA00EFF706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D184E61D2AB23FBA00EFF706 /* SceneDelegate.swift */; };
 		D184E6232AB23FBA00EFF706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D184E6212AB23FBA00EFF706 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D142F77D2AB612D0004C59F0 /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
 		D184E6182AB23FBA00EFF706 /* homeWork_20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homeWork_20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D184E61B2AB23FBA00EFF706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D184E61D2AB23FBA00EFF706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				D184E6322AB242B100EFF706 /* PersonsListTVC.swift */,
 				D1ADE0582AB264E0001D2AD4 /* InfoTVC.swift */,
+				D142F77D2AB612D0004C59F0 /* PersonInfo.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D184E61C2AB23FBA00EFF706 /* AppDelegate.swift in Sources */,
+				D142F77E2AB612D0004C59F0 /* PersonInfo.swift in Sources */,
 				D184E61E2AB23FBA00EFF706 /* SceneDelegate.swift in Sources */,
 				D184E6392AB24B7A00EFF706 /* PersonsList.swift in Sources */,
 				D184E6362AB24AF000EFF706 /* Person.swift in Sources */,

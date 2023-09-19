@@ -8,44 +8,38 @@
 import UIKit
 
 class InfoTVC: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        PersonsList.makePersonsList()
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // self.clearsSelectionOnViewWillAppear = false
+//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return PersonsList.namesArray.count
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 2
-    }
-
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return PersonsList.persons.count
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 2 }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 50 }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath)
-        if indexPath.row == 0 {
-            cell.textLabel?.text = PersonsList.emailsArray[indexPath.section]
-        } else {
-            cell.textLabel?.text = PersonsList.numbersArray[indexPath.section]
-        }
+        let person = PersonsList.persons[indexPath.section]
+        cell.textLabel?.text = indexPath.row == 0 ? person.email : person.number
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = PersonsList.namesArray[section] + " " + PersonsList.surnamesArray[section]
-        return section
+        let person = PersonsList.persons[section]
+        return person.name + " " + person.surname
     }
 
     /*
